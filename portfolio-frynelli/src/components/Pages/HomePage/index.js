@@ -1,5 +1,5 @@
 const HomePage =()=>{
-    return <div>
+    return <div className="container-hp">
         This is Home Page
     </div>
 }

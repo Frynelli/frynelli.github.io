@@ -10,10 +10,10 @@ function App() {
   return (
     <Fragment >
       <Routes>
-       <Route path="/" element={<Layout/>}>
+       <Route path="/" exact element={<Layout/>}>
         <Route path="/about" element={<About/>}></Route>
-       <Route path="/projects" element={<Projects/>}></Route>
-       <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="/projects" element={<Projects/>}></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
        </Route>
        
        

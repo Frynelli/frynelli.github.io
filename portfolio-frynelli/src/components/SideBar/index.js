@@ -10,12 +10,12 @@ const SideBar =()=>{
  <nav>
     <ul>
         <li>
-           <NavLink exact="true" activeClassName="active" to="/about">
+           <NavLink exact="true" activeclassname="active" to="/about">
                <h2>About</h2>
            </NavLink>
         </li>
         <li>
-            <NavLink exact="true" activeClassName="active" to="/projects">
+            <NavLink exact="true" activeclassname="active" to="/projects">
                <h2>Projects</h2>
             </NavLink>
         </li>
