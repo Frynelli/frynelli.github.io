@@ -1,0 +1,39 @@
+@import "../../variables";
+.nav-bar{
+  background-color: #FFFF;
+  width: $nav-bar-width;
+  height: 100%;
+  position: relative;
+  top: 0;
+  z-index: 3;
+  border-right: 3px solid black; 
+}
+//nav-bar-styling-boxes-text
+.nav-bar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.nav-bar ul li{
+    margin-top: 5px;
+    height: 35%;
+    width: 100%;
+    border-bottom: 2px solid #333;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color: $dark-color;
+}
+.nav-bar ul li a:active, .nav-bar ul li a.active{
+    color:$peach-dark;
+}
+.nav-bar ul li a:not(:active),.nav-bar ul li a:not(.active){
+    color: $dark-color;
+}
+.nav-bar ul li a h2{
+    margin-left: 5px;
+    writing-mode: vertical-lr;
+    display: inline-block;
+    transform: rotate(179deg);
+}

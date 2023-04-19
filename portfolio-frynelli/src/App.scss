@@ -1,31 +1,12 @@
-@import "animate.css";
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&family=Special+Elite&display=swap');
-//global fonts
-$fontSpecial: "Special Elite", sans-serif;
-$fontMuseo: 'MuseoModerno', cursive;
-$font-menu1: 24px;
-$font-title: 64px;
-$font-paragraph:  33px;
-//global colors
-$peach-light: #FFB4B4;
-$peach: #FF6F6F;
-$purple-light:#B4C9FF;
-$purple: #769CFF;
-$yellow: #FDFFA5;
-$mint: #B4FFDB;
-$peach-dark: #E75656;
-$grey: #D9D9D9;
-$dark-color: #333;
-
-
-
+@import "./variables";
 
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: $yellow;
+  
 }
+
 input, textarea{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

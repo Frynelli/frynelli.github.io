@@ -1,0 +1,24 @@
+@import "../../variables";
+
+.container{
+  width: $container-width-g;
+  height: $container-height-g;
+  background-color: $peach;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .container .container-main{
+    display: flex;
+    position: relative;
+    width: $container-width-g - 3vw;
+    height: $container-height-g - 3vh;
+    background-color: #FFFF;
+    margin: 0 auto;
+    border: 3px solid black;
+ }
+ .container .container-main .container-pages{
+  position: relative;
+   width: 100%;
+   background-color: $purple-light;
+ }
