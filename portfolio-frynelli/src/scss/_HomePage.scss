@@ -8,6 +8,8 @@
 .container-hp-g{
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-columns: 65% 35%;
     
 }
 //text-container
@@ -18,7 +20,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0px 20px ;
-    background-color: yellow;
+    
     
 }
 .welcome-text h1{
@@ -29,20 +31,68 @@ line-height: 7rem;
 letter-spacing: 10px;
 
 }
-
+.welcome-text .web-dev{
+    padding-left: 30px;
+    font-size: 60px;
+}
+.welcome-text .name{
+    padding-left: 15px;
+}
 .welcome-text .paragraph p{
     font-family: $fontMuseo;
     font-weight: 400;
     font-size: 33px;
     color: $text-grey;
-    text-align: center;
-    margin-right: 205px;
+    text-align: end;
 }
 .welcome-text .paragraph{
   hr{
     border: 4px solid black;
     border-radius: 5px;
     margin: 0 20px;
+    position: absolute;
+    width: 80%;
   }
 }
 //img-properties
+.container-hp-g .box-2{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.container-hp-g .circle-pink{
+    height: 390px;
+    width: 380px;
+    background-color: $peach-light;
+    border-radius: 50%;
+    // position: relative;
+    // right: 70px;
+    // bottom: 20px;
+}
+.container-hp-g .circle-mask{
+    height: 380px;
+    width: 370px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px 4px;
+    // margin-bottom: 4.5rem;
+    // position: relative;
+    // right: 70px;
+    // bottom: 20px;
+}
+.container-hp-g .circle-mask img{
+    width: 100%;
+    
+    object-fit: cover;
+}
+//rectangle-purple
+.box-2 .rectangle-purple{
+    height: 90%;
+    width: 120px;
+    border-radius: 5px;
+    background-color: $purple;
+}
+
+

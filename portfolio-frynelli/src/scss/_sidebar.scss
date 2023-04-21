@@ -9,29 +9,43 @@
   border-right: 3px solid black; 
 }
 //nav-bar-styling-boxes-text
+.nav-bar nav{
+    height: 100%;
+}
 .nav-bar ul{
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 .nav-bar ul li{
-    margin-top: 5px;
+   
     height: 35%;
     width: 100%;
     border-bottom: 2px solid #333;
 }
+.nav-bar ul li:hover{
+    background-color: $peach-dark;
+    a{
+        color: #FFFF;
+    }
+}
+
 .nav-bar ul li a{
+   
     text-decoration: none;
     color: $dark-color;
 }
 .nav-bar ul li a:active, .nav-bar ul li a.active{
     color:$peach-dark;
+    :hover{
+        color: aliceblue;
+    }
 }
-.nav-bar ul li a:not(:active),.nav-bar ul li a:not(.active){
-    color: $dark-color;
-}
+
+
 .nav-bar ul li a h2{
+    margin-top: 10px;
     margin-left: 10px;
     writing-mode: vertical-lr;
     display: inline-block;
