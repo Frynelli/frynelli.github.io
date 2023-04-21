@@ -1,0 +1,111 @@
+@import url(animate.css);
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno&family=Special+Elite&display=swap");
+.container-hp {
+  width: 100%;
+  height: 100%; }
+
+.container-hp-g {
+  width: 100%;
+  height: 100%; }
+
+.welcome-text {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0px 20px;
+  background-color: yellow; }
+
+.welcome-text h1 {
+  font-family: "Special Elite", sans-serif;
+  font-weight: 400;
+  font-size: 66px;
+  line-height: 7rem;
+  letter-spacing: 10px; }
+
+.welcome-text .paragraph p {
+  font-family: "MuseoModerno", cursive;
+  font-weight: 400;
+  font-size: 33px;
+  color: #797979;
+  text-align: center;
+  margin-right: 205px; }
+
+.welcome-text .paragraph hr {
+  border: 4px solid black;
+  border-radius: 5px;
+  margin: 0 20px; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FF6F6F;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.container .container-main {
+  display: flex;
+  position: relative;
+  width: 98vw;
+  height: 97vh;
+  background-color: #FFFF;
+  margin: 0 auto;
+  border: 3px solid black; }
+
+.container .container-main .container-pages {
+  position: relative;
+  width: 100%;
+  background-color: #B4C9FF; }
+
+.nav-bar {
+  background-color: #FFFF;
+  width: 3.5rem;
+  height: 100%;
+  position: relative;
+  top: 0;
+  z-index: 3;
+  border-right: 3px solid black; }
+
+.nav-bar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+
+.nav-bar ul li {
+  margin-top: 5px;
+  height: 35%;
+  width: 100%;
+  border-bottom: 2px solid #333; }
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #333; }
+
+.nav-bar ul li a:active, .nav-bar ul li a.active {
+  color: #E75656; }
+
+.nav-bar ul li a:not(:active), .nav-bar ul li a:not(.active) {
+  color: #333; }
+
+.nav-bar ul li a h2 {
+  margin-left: 10px;
+  writing-mode: vertical-lr;
+  display: inline-block;
+  transform: rotate(179deg); }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+input, textarea {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+
+h1 {
+  font-family: "MuseoModerno", cursive; }
+
+p {
+  font-family: "MuseoModerno", cursive; }

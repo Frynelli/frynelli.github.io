@@ -1,4 +1,4 @@
-@import "../../variables";
+
 
 .container{
   width: $container-width-g;
@@ -11,7 +11,7 @@
  .container .container-main{
     display: flex;
     position: relative;
-    width: $container-width-g - 3vw;
+    width: $container-width-g - 2vw;
     height: $container-height-g - 3vh;
     background-color: #FFFF;
     margin: 0 auto;

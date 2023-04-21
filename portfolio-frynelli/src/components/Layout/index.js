@@ -1,7 +1,7 @@
 import SideBar from "../SideBar";
 import HomePage from '../Pages/HomePage';
 import { Outlet, Route, Routes, useLocation } from "react-router-dom";
-import "./index.scss";
+
 import { useEffect, useState } from "react";
 
 
@@ -20,11 +20,11 @@ const Layout =(props)=>{
         <div className="container-main">
             
           <SideBar/>
-          <div>
+         {!showPagesContainer && (<div className="container-hp">
           <Routes>
          <Route path="/" exact element={<HomePage />} />
          </Routes>
-         </div>
+         </div>)}
           {showPagesContainer && (<div className="container-pages">
             <Outlet /> 
         </div>)}

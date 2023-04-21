@@ -1,5 +1,5 @@
 import {Route, Routes} from "react-router-dom"
-import './App.scss';
+import './dist/App.css';
 import { Fragment } from 'react';
 import Layout from './components/Layout';
 import About from "./components/Pages/About";

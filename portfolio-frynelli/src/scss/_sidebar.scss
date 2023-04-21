@@ -1,4 +1,4 @@
-@import "../../variables";
+
 .nav-bar{
   background-color: #FFFF;
   width: $nav-bar-width;
@@ -32,7 +32,7 @@
     color: $dark-color;
 }
 .nav-bar ul li a h2{
-    margin-left: 5px;
+    margin-left: 10px;
     writing-mode: vertical-lr;
     display: inline-block;
     transform: rotate(179deg);
