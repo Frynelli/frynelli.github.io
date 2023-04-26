@@ -1,9 +1,10 @@
 @import "animate.css";
 
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&family=Roboto+Mono&family=Special+Elite&display=swap');
 //global fonts
 $fontSpecial: "Special Elite", sans-serif;
 $fontMuseo: 'MuseoModerno', cursive;
+$fontRoboto: 'Roboto Mono', monospace;
 $font-menu1: 24px;
 $font-title: 64px;
 $font-paragraph:  33px;
@@ -15,9 +16,10 @@ $purple: #769CFF;
 $yellow: #FDFFA5;
 $mint: #B4FFDB;
 $peach-dark: #E75656;
-$grey: #D9D9D9;
+$grey: #eae6e6;
 $text-grey: #797979;
 $dark-color: #333;
+$black-color:#101010;
 // container-width
 $container-width-g: 100vw;
 $container-height-g: 100vh;
@@ -38,3 +40,49 @@ $nav-bar-width: 3.5rem;
         opacity: 0;
     }
 }
+
+.katheti{
+    hr{
+        position: absolute;
+    border: 3px solid black;
+    height: 90%;
+    transform: rotate(180deg);
+    top: 0;
+    left: 80%;
+    border-radius: 10px;
+    }
+   
+}
+.container-pages{
+    .cv{
+    display: flex;
+    
+    .button{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+
+        button{
+            width: 83px;
+            height: 39px;
+             background-color: #f9f9f9;
+             border: 2px solid #101010;
+            border-radius: 5px;
+            position: relative;
+            top: 10px;
+           
+        }
+       
+        a{
+            color: $black-color;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 22px;
+            font-family: monospace;
+            
+            &:hover{
+                color:$peach-dark;
+            }
+        }
+    }
+}}
