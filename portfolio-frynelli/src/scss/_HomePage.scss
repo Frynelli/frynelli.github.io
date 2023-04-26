@@ -10,6 +10,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 65% 35%;
+    grid-template-rows: 1 1;
     
 }
 //text-container
@@ -18,8 +19,10 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    margin: 0px 20px ;
+    justify-content: center;
+    position: relative;
+    left: 10%;
+    top: 0;
     
     
 }
@@ -32,35 +35,44 @@ letter-spacing: 10px;
 
 }
 .welcome-text .web-dev{
-    padding-left: 30px;
+    //padding-left: 50px;
     font-size: 60px;
 }
-.welcome-text .name{
-    padding-left: 15px;
-}
-.welcome-text .paragraph p{
+// .welcome-text .name{
+//     padding-left: 25px;
+// }
+.welcome-text .paragraph {
+    opacity: 0;
+    animation: bounceIn 0.5s 0.5s ease-in;
+    animation-fill-mode: forwards;
+    p{
     font-family: $fontMuseo;
     font-weight: 400;
-    font-size: 33px;
+    font-size: 20px;
+    letter-spacing: 5px;
     color: $text-grey;
-    text-align: end;
-}
-.welcome-text .paragraph{
+    text-align: start;
+    
+    }
   hr{
-    border: 4px solid black;
+    border: 4px solid $black-color;
     border-radius: 5px;
-    margin: 0 20px;
+    margin-top: 50px;
     position: absolute;
-    width: 80%;
+    width: 120%;
+    
   }
 }
 //img-properties
 .container-hp-g .box-2{
     height: 100%;
-    display: flex;
-    align-items: center;
     width: 100%;
-    justify-content: center;
+    position: relative;
+    
+    right: 70px;
+    opacity:0;
+    animation: bounceIn 1s 1s;
+    animation-fill-mode: forwards;
 }
 .container-hp-g .circle-pink{
     height: 390px;
@@ -90,9 +102,12 @@ letter-spacing: 10px;
 //rectangle-purple
 .box-2 .rectangle-purple{
     height: 90%;
-    width: 120px;
+    width: 80px;
     border-radius: 5px;
     background-color: $purple;
+    position: absolute;
+    left: -8px;
+    opacity: 0.4;
 }
 
 
