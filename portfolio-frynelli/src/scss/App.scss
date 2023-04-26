@@ -2,12 +2,15 @@
 @import "./HomePage.scss";
 @import "./Layout.scss";
 @import "./sidebar.scss";
-
+@import "./About";
+@import './Contact';
+@import "./Form";
+@import "./AnimatedLetters";
+@import "./TextSphere";
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 input, textarea{
