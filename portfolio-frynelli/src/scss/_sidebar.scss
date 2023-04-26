@@ -1,12 +1,12 @@
 
 .nav-bar{
-  background-color: #FFFF;
+  background-color: #f8f8f8; //was white
   width: $nav-bar-width;
   height: 100%;
   position: relative;
   top: 0;
   z-index: 3;
-  border-right: 3px solid black; 
+  border-right: 3px solid $black-color; //was black 
 }
 //nav-bar-styling-boxes-text
 .nav-bar nav{
@@ -22,26 +22,32 @@
    
     height: 35%;
     width: 100%;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid $black-color;  //was black
+}
+.nav-bar ul li:last-child{
+    border-bottom: none;
 }
 .nav-bar ul li:hover{
     background-color: $peach-dark;
     a{
-        color: #FFFF;
+        color: #f8f8f8; //was white white
     }
 }
 
 .nav-bar ul li a{
    
     text-decoration: none;
-    color: $dark-color;
+    color: $dark-color;  //was dark color
 }
 .nav-bar ul li a:active, .nav-bar ul li a.active{
     color:$peach-dark;
     :hover{
-        color: aliceblue;
+        text-decoration: line-through;
+        color: #f8f8f8;
+       
     }
 }
+
 
 
 .nav-bar ul li a h2{
