@@ -6,18 +6,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
  .container .container-main{
     display: flex;
     position: relative;
-    width: $container-width-g - 2vw;
-    height: $container-height-g - 3vh;
-    background-color: #FFFF;
+    width: $container-width-g - 4vw;
+    height: $container-height-g - 5vh;
+    background-color: #f8f8f8; // was white
     margin: 0 auto;
-    border: 3px solid black;
+    border: 3px solid $black-color; //was black
+    border-radius: 5px;
  }
  .container .container-main .container-pages{
   position: relative;
    width: 100%;
-   background-color: $purple-light;
+   
  }
