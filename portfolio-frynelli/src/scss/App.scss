@@ -7,11 +7,15 @@
 @import "./Form";
 @import "./AnimatedLetters";
 @import "./TextSphere";
+@import "./modal";
+
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 
 input, textarea{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
