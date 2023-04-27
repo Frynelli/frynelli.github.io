@@ -56,11 +56,17 @@ $nav-bar-width: 3.5rem;
 .container-pages{
     .cv{
     display: flex;
-    
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+
     .button{
         display: flex;
         width: 100%;
         justify-content: end;
+        margin-right: 15px;
 
         button{
             width: 83px;

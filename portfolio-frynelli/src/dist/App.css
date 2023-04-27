@@ -19,11 +19,17 @@
   border-radius: 10px; }
 
 .container-pages .cv {
-  display: flex; }
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row; }
   .container-pages .cv .button {
     display: flex;
     width: 100%;
-    justify-content: end; }
+    justify-content: end;
+    margin-right: 15px; }
     .container-pages .cv .button button {
       width: 83px;
       height: 39px;
@@ -178,6 +184,7 @@
     color: #f8f8f8; }
 
 .nav-bar ul li a {
+  height: 90%;
   text-decoration: none;
   color: #333; }
 
@@ -192,7 +199,8 @@
   margin-left: 10px;
   writing-mode: vertical-lr;
   display: inline-block;
-  transform: rotate(179deg); }
+  transform: rotate(179deg);
+  padding-top: 5em; }
 
 .container-about {
   display: flex;
@@ -228,6 +236,8 @@
     border-radius: 5px;
     position: relative;
     top: 10px; }
+    .container-about .box-left .button button:hover {
+      border-color: #E75656; }
   .container-about .box-left .button a {
     color: #101010;
     font-weight: 600;
@@ -344,6 +354,7 @@
         position: relative;
         top: 10px; }
         .container-contact .box-left .button button:hover {
+          border-color: #E75656;
           background-color: white; }
       .container-contact .box-left .button a {
         color: white;
@@ -383,9 +394,8 @@
         line-height: 59px; }
 
 form {
-  width: 50%;
-  height: 200px;
-  margin: 0 auto;
+  width: min-content;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   align-items: baseline; }
@@ -394,25 +404,51 @@ form {
     font-size: 15px; }
   form input::placeholder {
     color: #797979; }
+  form .form-main {
+    width: 100%;
+    margin: 0px auto; }
   form .input-size {
     padding: 10px;
-    border-radius: 20px;
-    background-color: #f2eeee;
+    border-radius: 5px;
+    border: 2px solid #797979;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     width: 350px; }
   form .textarea {
-    padding: 20px; }
+    width: 80%;
+    height: 95px;
+    padding: 10px; }
   form .button-f {
-    background: #f9f9f9;
-    color: black;
+    background: white;
+    color: #E75656;
+    font-weight: 600;
     width: 89px;
     margin: auto;
     display: flex;
     justify-content: center;
-    border-radius: 20px;
+    border: 2px solid #E75656;
+    border-radius: 5px;
     height: 33px; }
+    form .button-f:hover {
+      color: white;
+      background-color: #E75656; }
+
+.form-contact .form-title {
+  margin-bottom: 30px; }
+  .form-contact .form-title h1 {
+    font-size: 45px !important;
+    width: max-content !important;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    align-items: start !important; }
+  .form-contact .form-title p {
+    font-size: 20px !important;
+    margin-top: 0 !important;
+    letter-spacing: 0 !important;
+    line-height: 30px !important;
+    width: 80% !important; }
 
 .text-animate {
   display: inline-block;
@@ -458,6 +494,52 @@ form {
 .tagcloud--item:hover {
   color: #769CFF;
   cursor: default; }
+
+body.active-modal {
+  overflow-y: hidden; }
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px; }
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 50; }
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8); }
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: white;
+  border-radius: 10px;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: max-content;
+  min-width: min-content;
+  z-index: 50; }
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+  .close-modal svg {
+    width: 20px;
+    height: 20px; }
+  .close-modal:hover {
+    color: #E75656; }
 
 * {
   box-sizing: border-box;
