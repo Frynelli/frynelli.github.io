@@ -1,8 +1,14 @@
 import useTypeWriter from "../../TypeWriter/TypeWriter";
+import { useState } from "react";
 import Form from '../../Form/index'
 import sxedio from '../../../assets/sxedia.png';
+import MyModal from "../../Modal";
 const typeWord = 'Contact Me';
 const Contact =()=>{
+    const [modal, setModal] = useState(false);
+    const toggleModal =()=>{
+        setModal(!modal);
+    }
 const ContactMe = useTypeWriter(typeWord)
     return <div className="container-contact">
         <div className="box-left">
@@ -14,8 +20,10 @@ const ContactMe = useTypeWriter(typeWord)
                 <h3>Let's talk</h3>
                 <p>
                 Wanna get in touch or talk about a project? 
-                  Feel free to <a href="#">contact me</a>
+                  Feel free to <a href="#" onClick={toggleModal}>contact me</a>
                 </p>
+                {modal && <MyModal closeModal={setModal}/>}
+                
                </div>
                
               
