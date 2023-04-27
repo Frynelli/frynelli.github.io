@@ -42,7 +42,7 @@ const About =()=>{
                <ul>
                 <li className="gitHub"><a href="https://github.com/Frynelli" target="blank"><AiOutlineGithub/></a></li>
                 <li className="linkedin"><a href="https://www.linkedin.com/in/frinelli-oikonomou" target="blank"><AiFillLinkedin/></a></li>
-                <li className="cv"><NavLink exact="true" activeclassname="active" to="/about/cv">cv</NavLink></li>
+                <li className="cv-link"><NavLink exact="true" activeclassname="active" to="/about/cv">cv</NavLink></li>
                </ul>
             </div>
         </div>
