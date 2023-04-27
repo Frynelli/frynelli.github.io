@@ -26,6 +26,7 @@
 }
 .nav-bar ul li:last-child{
     border-bottom: none;
+    
 }
 .nav-bar ul li:hover{
     background-color: $peach-dark;
@@ -35,9 +36,11 @@
 }
 
 .nav-bar ul li a{
-   
+   height: 90%;
     text-decoration: none;
     color: $dark-color;  //was dark color
+    
+        
 }
 .nav-bar ul li a:active, .nav-bar ul li a.active{
     color:$peach-dark;
@@ -56,4 +59,6 @@
     writing-mode: vertical-lr;
     display: inline-block;
     transform: rotate(179deg);
+    padding-top: 5em;
+    
 }
