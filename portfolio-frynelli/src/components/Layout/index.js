@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 
 
-const Layout =(props)=>{
+const Layout =()=>{
     const [showPagesContainer, setShowPagesContainer] = useState(false);
     const location = useLocation();
     useEffect(()=>{

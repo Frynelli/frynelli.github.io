@@ -1,6 +1,6 @@
 import useTypeWriter from "../../TypeWriter/TypeWriter";
 import { useState } from "react";
-import Form from '../../Form/index'
+
 import sxedio from '../../../assets/sxedia.png';
 import MyModal from "../../Modal";
 const typeWord = 'Contact Me';
@@ -20,7 +20,7 @@ const ContactMe = useTypeWriter(typeWord)
                 <h3>Let's talk</h3>
                 <p>
                 Wanna get in touch or talk about a project? 
-                  Feel free to <a href="#" onClick={toggleModal}>contact me</a>
+                  Feel free to <a href="#" className="text-bounce-hover" onClick={toggleModal}>contact me</a>
                 </p>
                 {modal && <MyModal closeModal={setModal}/>}
                 

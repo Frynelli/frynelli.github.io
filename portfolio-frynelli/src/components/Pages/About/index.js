@@ -2,6 +2,7 @@ import qr from "../../../assets/qr-sample.jpg";
 import { NavLink } from "react-router-dom";
 import {AiOutlineGithub, AiFillLinkedin} from "react-icons/ai"
 import useTypeWriter from "../../TypeWriter/TypeWriter";
+
 // import useTypedSuperpower from "../../useTypedSuperpower";
 const typeWord = "About Me"
 
@@ -44,8 +45,10 @@ const About =()=>{
                 <li className="linkedin"><a href="https://www.linkedin.com/in/frinelli-oikonomou" target="blank"><AiFillLinkedin/></a></li>
                 <li className="cv-link"><NavLink exact="true" activeclassname="active" to="/about/cv">cv</NavLink></li>
                </ul>
+               
             </div>
         </div>
+
     </div>
     
 }

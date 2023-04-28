@@ -9,17 +9,17 @@ const SideBar =()=>{
     <ul>
         <li>
            <NavLink exact="true" activeclassname="active" to="/about">
-               <h2>About</h2>
+               <h2>about</h2>
            </NavLink>
         </li>
         <li>
             <NavLink exact="true" activeclassname="active" to="/projects">
-               <h2>Projects</h2>
+               <h2>projects</h2>
             </NavLink>
         </li>
         <li>
            <NavLink exact="true" activeClassName="active" to="/contact">
-               <h2>Contact</h2>
+               <h2>contact</h2>
           </NavLink>
         </li>
     </ul>
