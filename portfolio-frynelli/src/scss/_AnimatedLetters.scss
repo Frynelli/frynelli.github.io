@@ -23,3 +23,13 @@
       cursor: default;
     }
 }
+.text-bounce-hover{
+  min-width: 8px;
+  display: inline-block;
+  animation-fill-mode: both;
+  &:hover{
+    animation: pulse 1s;
+      color: $peach;
+      cursor: default;
+  }
+}
