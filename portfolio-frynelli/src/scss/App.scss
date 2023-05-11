@@ -4,11 +4,13 @@
 @import "./sidebar.scss";
 @import "./About";
 @import './Contact';
+@import "./Project";
 @import "./Form";
 @import "./AnimatedLetters";
 @import "./TextSphere";
 @import "./modal";
 @import "./imageGallery";
+@import "./galleria";
 
 
 *{
@@ -17,6 +19,7 @@
   padding: 0;
   
 }
+
 
 
 input, textarea{
@@ -28,4 +31,7 @@ h1{
 }
 p{
   font-family: $fontMuseo;
+}
+body{
+  overflow: hidden;
 }

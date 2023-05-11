@@ -7,7 +7,7 @@ useEffect(()=>{
       setTyping(word.slice(0,typing.length + 1))
     },200)
     return ()=> clearTimeout(timeout);
-},[typing])
+},[typing,word])
 return typing;
 }
 export default useTypeWriter;

@@ -29,6 +29,7 @@ $nav-bar-width: 3.5rem;
 
 // typing animation
 
+
 .blinking-cursor::after{
     content: "|";
     color: $dark-color;
@@ -51,8 +52,10 @@ $nav-bar-width: 3.5rem;
     border-radius: 10px;
     }
    
+    
 }
 .container-pages{
+    overflow: scroll;
     .cv{
     display: flex;
     height: 100%;
@@ -91,3 +94,4 @@ $nav-bar-width: 3.5rem;
         }
     }
 }}
+

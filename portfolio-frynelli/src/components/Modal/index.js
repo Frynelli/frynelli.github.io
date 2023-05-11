@@ -11,7 +11,7 @@ return<>
 <div onClick={toggleModal} className="overlay"></div>
 <div className="modal-content">
  <Form/>
-<a onClick={toggleModal} className="close-modal"><IoCloseSharp/></a>
+<a href="#" onClick={toggleModal} className="close-modal"><IoCloseSharp/></a>
 </div>
 </div>
 </>

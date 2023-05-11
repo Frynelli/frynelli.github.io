@@ -3,13 +3,17 @@ import { useState } from "react";
 
 import sxedio from '../../../assets/sxedia.png';
 import MyModal from "../../Modal";
+
+
 const typeWord = 'Contact Me';
+
+
 const Contact =()=>{
     const [modal, setModal] = useState(false);
     const toggleModal =()=>{
         setModal(!modal);
     }
-const ContactMe = useTypeWriter(typeWord)
+     const ContactMe = useTypeWriter(typeWord)
     return <div className="container-contact">
         <div className="box-left">
             <div className="contact-text">
@@ -41,7 +45,7 @@ const ContactMe = useTypeWriter(typeWord)
         <div className="box-right">
         
             <div className="grid-box">
-            <div className="image-sxedio"><img src={sxedio}/></div>
+            <div className="image-sxedio"><img src={sxedio} alt="scketch"/></div>
         <div className="green-box">
 
         </div>
