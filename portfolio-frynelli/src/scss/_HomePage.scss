@@ -50,9 +50,9 @@ letter-spacing: 10px;
     //font-size: 60px;
 }
 @include mobile{
-    font-size: 40px;
-    line-height: 4rem;
-    letter-spacing: 10px;
+    font-size: 33px;
+    line-height: 3.5rem;
+    letter-spacing: 7px;
 
 }
 }
@@ -78,7 +78,7 @@ letter-spacing: 10px;
     
     
     @include mobile{
-        font-size: 17px;
+        font-size: 13px;
         letter-spacing: 1px;
     }
     }

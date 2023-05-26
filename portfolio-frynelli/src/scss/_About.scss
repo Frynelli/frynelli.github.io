@@ -41,6 +41,7 @@
             @include tablet{ font-size: $font-title-tablet;}
             @include mobile{
                 font-size: $font-title-mob;
+                letter-spacing: 10px;
             }
         }
         

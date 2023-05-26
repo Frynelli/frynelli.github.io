@@ -133,9 +133,9 @@
   letter-spacing: 10px; }
   @media (max-width: 720px) {
     .welcome-text h1 {
-      font-size: 40px;
-      line-height: 4rem;
-      letter-spacing: 10px; } }
+      font-size: 33px;
+      line-height: 3.5rem;
+      letter-spacing: 7px; } }
 
 .welcome-text .web-dev {
   font-size: 60px; }
@@ -156,7 +156,7 @@
     text-align: start; }
     @media (max-width: 720px) {
       .welcome-text .paragraph p {
-        font-size: 17px;
+        font-size: 13px;
         letter-spacing: 1px; } }
   .welcome-text .paragraph hr {
     margin-top: 50px;
@@ -327,7 +327,8 @@
         font-size: 60px; } }
     @media (max-width: 720px) {
       .container-about .box-left .about-content h1 {
-        font-size: 40px; } }
+        font-size: 30px;
+        letter-spacing: 10px; } }
   .container-about .box-left .about-content p {
     font-family: "Roboto Mono", monospace;
     font-weight: 400;
@@ -337,8 +338,8 @@
     margin-top: 10px; }
     @media (max-width: 720px) {
       .container-about .box-left .about-content p {
-        font-size: 25px;
-        width: 400px;
+        font-size: 18px;
+        width: 300px;
         line-height: 33.52px;
         text-align: justify; } }
 
@@ -480,7 +481,8 @@
             height: 30%; } }
         @media (max-width: 720px) {
           .container-contact .box-left .contact-text h1 {
-            font-size: 40px; } }
+            font-size: 30px;
+            letter-spacing: 10px; } }
       .container-contact .box-left .contact-text .background-color {
         background-color: #eae6e6;
         border-right: 4px solid;
@@ -509,7 +511,7 @@
               margin-top: 10px; }
               @media (max-width: 720px) {
                 .container-contact .box-left .contact-text .background-color .contact-form .paragraph h3 {
-                  font-size: 28px;
+                  font-size: 23px;
                   width: 390px; } }
             .container-contact .box-left .contact-text .background-color .contact-form .paragraph p {
               font-family: "MuseoModerno", cursive;
@@ -521,9 +523,9 @@
               letter-spacing: 2px; }
               @media (max-width: 720px) {
                 .container-contact .box-left .contact-text .background-color .contact-form .paragraph p {
-                  font-size: 25px;
-                  width: 400px;
-                  line-height: 33.52px; } }
+                  font-size: 18px;
+                  width: 300px;
+                  line-height: 31.52px; } }
               .container-contact .box-left .contact-text .background-color .contact-form .paragraph p a {
                 color: #101010;
                 text-decoration-color: #E75656; }
@@ -593,6 +595,9 @@
         @media (max-width: 1200px) {
           .container-contact .box-right .email-box .email {
             font-size: 30px; } }
+        @media (max-width: 720px) {
+          .container-contact .box-right .email-box .email {
+            font-size: 23px; } }
       .container-contact .box-right .email-box p {
         font-family: "MuseoModerno", cursive;
         font-size: 28px;
@@ -601,6 +606,9 @@
           .container-contact .box-right .email-box p {
             font-size: 20px;
             line-height: 19px; } }
+        @media (max-width: 720px) {
+          .container-contact .box-right .email-box p {
+            font-size: 16px; } }
 
 .container-project {
   width: 100%;
@@ -627,7 +635,8 @@
           font-size: 60px; } }
       @media (max-width: 720px) {
         .container-project .box-top h1 {
-          font-size: 40px; } }
+          font-size: 30px;
+          letter-spacing: 10px; } }
   .container-project .box-bottom {
     height: 80%;
     display: flex;
@@ -847,6 +856,9 @@ body.active-modal {
   border: 4px solid;
   border-radius: 4%;
   transition: all 1s; }
+  @media (max-width: 720px) {
+    .img-wrapper {
+      border: 2px solid; } }
   .img-wrapper img {
     display: block;
     width: 100%;
@@ -951,7 +963,7 @@ body.active-modal {
     @media (max-width: 720px) {
       .outer-section .inner-box {
         grid-template-columns: auto;
-        grid-template-rows: repeat(6, 300px); } }
+        grid-template-rows: repeat(6, 200px); } }
     .outer-section .inner-box .item {
       height: 96%;
       width: 85%; }
