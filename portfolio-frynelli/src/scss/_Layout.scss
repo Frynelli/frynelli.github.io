@@ -13,6 +13,8 @@
     position: relative;
     width: $container-width-g - 4vw;
     height: $container-height-g - 5vh;
+    max-width: 1720px;
+    max-height: 1010px;
     background-color: #f8f8f8; // was white
     margin: 0 auto;
     border: 3px solid $black-color; //was black
@@ -22,5 +24,12 @@
  .container .container-main .container-pages{
   position: relative;
    width: 100%;
-   
+   overflow-x: hidden;
+   @include tablet{
+    //background-color: yellow;
+   }
+  //  @include mobile{
+  //   background-color: pink;
+  //  }
  }
+ 

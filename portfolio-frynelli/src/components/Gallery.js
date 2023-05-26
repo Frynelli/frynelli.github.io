@@ -3,7 +3,7 @@ import img2 from '../assets/projects/img2.png';
 import img3 from '../assets/projects/img3.png';
 import img4 from '../assets/projects/img4.png';
 import extra from "../assets/projects/extra.png";
-
+import michaela from "../assets/projects/michaela.png";
 const Gallery = ()=>{
 
   
@@ -20,16 +20,23 @@ const Gallery = ()=>{
       </a>
      </div>
             </div>
-        
+            <div className='item img-wrapper img4'>
+<img className='zoom blur' src={michaela} alt='survey-form'/>
+     <div className='content slide-bottom'>
+      <a href='https://awakenwithmichaela.com/' target='_blank'>
+         <h3>Awaken With Michaela</h3>
+      <p>Wordpress</p></a>
+     </div>
+            </div>
           <div className='item img-wrapper img2'>
         <img className='zoom blur ' src={img2} alt='weather-app'/>
      <div className='content slide-bottom'>
      <a href='https://weather-project-2021.netlify.app/' target='_blank'> 
-     <h3>Weather-App</h3>
-      <p>HTML / CSS / JavaScript / API</p>
+             <h3>Weather-App</h3>
+           <p>HTML / CSS / JavaScript / API</p>
       </a>
      </div>
-            </div>
+        </div>
           <div className='item  img-wrapper img1'>
 <img className='zoom blur' src={img1} alt='Technical Documentation'/>
      <div className='content slide-bottom'>
@@ -55,6 +62,7 @@ const Gallery = ()=>{
       <p>HTML / CSS </p></a>
      </div>
             </div>
+            
         </div>
         
       </div>

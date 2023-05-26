@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
- import selfie from "../../../assets/selfie.jpg";
+
 import AnimatedLetters from "../../AnimatedLetters";
 import TextShpere from "../../TextSphere";
 // {/* <div className="box-2">
@@ -23,38 +23,7 @@ const HomePage =()=>{
     return ()=> clearTimeout(timeout)
    },[])
    
-   //starts my typing animation 
-    // const [typingWebDev, setTypingWebDev]=useState("");
-    // useEffect(()=>{
-    //      const timeout=  setTimeout(()=>{
-    //        setTypingWebDev(WebDev.slice(0, typingWebDev.length + 1))
-    //       },200)
-    //       return ()=> clearTimeout(timeout)
-    //    },[typingWebDev])
-
-// {/* <div className="container-hp-g">
-        
-//         <div className="welcome-text">
-          
-//             <h1>Hi,<br/><span className="name">I'm Frynelli </span><br/><span className="web-dev blinking-cursor">{typingWebDev}</span></h1>
-//             <span className="paragraph">
-//             <p>
-//                 Junior Front End & Wordpress    
-//             </p>
-//             <hr/>
-//             </span>
-            
-//             </div>
-//             <div className="box-2">
-//                 <div className="rectangle-purple"></div>
-//                 <div className="circle-pink">
-//             <div className="circle-mask">
-//         <img src={selfie} alt="selfie"/>
-//         </div>
-//                 </div>
-//             </div>
-        
-//     </div> */}
+   
 
     return <div className="container-hp-g">
                <div className="welcome-text text-zone">
@@ -84,7 +53,7 @@ const HomePage =()=>{
                  </h1>
                  <span className="paragraph">
                    <p>
-                     Junior Front End & Wordpress    
+                     Junior Front End Developer & Wordpress    
                   </p>
                     <hr/>
                  </span>

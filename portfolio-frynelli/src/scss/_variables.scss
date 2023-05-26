@@ -1,13 +1,24 @@
 @import "animate.css";
-
+@import "./Breakpoints";
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno&family=Roboto+Mono&family=Special+Elite&display=swap');
 //global fonts
 $fontSpecial: "Special Elite", sans-serif;
 $fontMuseo: 'MuseoModerno', cursive;
 $fontRoboto: 'Roboto Mono', monospace;
-$font-menu1: 24px;
-$font-title: 64px;
-$font-paragraph:  33px;
+$font-menu1-desk: 24px;
+$font-title-desk: 74px;
+$font-h3-desktop: 30px;
+$font-h3-tablet:15px;
+$font-h3-mob: 28px;
+$font-homePage-desk: 66px;
+$font-paragraph-desk: 28px;
+$font-paragraph-mobile: 25px;
+$font-btn-desk: 22px;
+$font-title-tablet: 60px;
+$font-title-mob:40px;
+$font-p-gallery-desk: 18px;
+$font-p-gallery-tablet: 10px;
+$paragraph-mobile: 400px;
 //global colors
 $peach-light: #FFB4B4;
 $peach: #FF6F6F;
@@ -20,6 +31,8 @@ $grey: #eae6e6;
 $text-grey: #797979;
 $dark-color: #333;
 $black-color:#101010;
+$btn-dark:#101010;
+$btn-light:#f9f9f9;
 // container-width
 $container-width-g: 100vw;
 $container-height-g: 100vh;
@@ -64,34 +77,86 @@ $nav-bar-width: 3.5rem;
     flex-wrap: wrap;
     flex-direction: row;
 
-    .button{
-        display: flex;
-        width: 100%;
-        justify-content: end;
-        margin-right: 15px;
-
-        button{
-            width: 83px;
-            height: 39px;
-             background-color: #f9f9f9;
-             border: 2px solid #101010;
-            border-radius: 5px;
-            position: relative;
-            top: 10px;
-           
+    
+}
+//btn desktop-tablet
+.button{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-right: 15px;
+    
+    button{
+        width: 83px;
+        height: 39px;
+         background-color: #f9f9f9;
+         border: 2px solid #101010;
+        border-radius: 5px;
+        position: relative;
+        top: 10px;
+        //btn-mobile
+       @include mobile{
+        width: 40px;
+        height: 40px;
+       border-radius: 100%;
+       background-color: $peach-light;
+       border: #f9f9f9;
+       }
+    }
+    a{
+        color: $black-color;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: $font-btn-desk;
+        font-family: monospace;
+        
+        @include tablet{
+            display: flex;
+            justify-content: center;
         }
-       
-        a{
-            color: $black-color;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 22px;
-            font-family: monospace;
-            
-            &:hover{
-                color:$peach-dark;
+        svg{
+            @include mobile{
+                color: #f9f9f9;
             }
         }
+        }
     }
-}}
-
+    .button:hover{
+        button{border-color: $peach-dark;}
+        a{color:$peach-dark;}
+        @include mobile{
+            button{
+                background-color: #f9f9f9;
+                border:2px solid $peach-light;
+            }
+            svg{color: $peach-light;}
+        }
+    }
+}
+@keyframes arrowMove {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+        
+    }
+    30%{
+        opacity:1 ;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(70%);
+        
+    }
+}
+.arrow{
+    svg{
+        height: 60px;
+        width: 60px;
+        opacity: 0.8;
+        color:$text-grey;
+        
+    }
+    animation: arrowMove 3045ms forwards ease-in;
+}

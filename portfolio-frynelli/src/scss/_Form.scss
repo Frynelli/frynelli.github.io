@@ -84,3 +84,10 @@ display: flex;
 input:hover, textarea:hover{
     border-color: $grey;
 }
+.form-contact.thanks-container{
+    h3{
+        font-family: $fontSpecial !important;
+        font-size: 20px;
+        text-align: center;
+    }
+}

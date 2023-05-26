@@ -1,10 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import AnimatedLetters from "../AnimatedLetters";
+import emailjs from '@emailjs/browser';
 
-
-const Form = ()=>{
+const Form = ({openNote})=>{
+    const toggleNote =()=>{
+        openNote(true);
+      }
     const contactArray = ['C','o','n','t','a','c','t','','M','e'];
     const [letterClass, setLetterClass]=useState("text-animate");
+   
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_uutqmvg', 'template_pidm1b8', form.current, '4HRN3_1hUj55j0gUO')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      toggleNote()
+     
+  };
+  
     useEffect(()=>{
         const timeout =  setTimeout(()=>{
             setLetterClass('text-animate-hover')
@@ -12,7 +31,7 @@ const Form = ()=>{
         return ()=> clearTimeout(timeout)
        },[])
     return<>
-        <form className="form-contact">
+        <form ref={form} onSubmit={sendEmail} className="form-contact">
             <div className="form-title">
             
                 <h1><AnimatedLetters 
@@ -24,16 +43,13 @@ const Form = ()=>{
             </div>
             <div className="form-main">
         <label for="name">Name:</label>
-        <input className="input-size" activeclassname="active" type="text" id="name" name="name" required/>
-        <br/><br/>
-        <label for="subject">Subject:</label>
-        <input className="input-size" activeclassname="active" type="text" id="subject" name="subject" required/>
+        <input className="input-size" activeclassname="active" type="text" id="name" name="user_name" required/>
         <br/><br/>
         <label for="email">Email:</label>
-        <input className="input-size" activeclassname="active" type="email" id="email" name="email" placeholder="Enter your email" required/>
+        <input className="input-size" activeclassname="active" type="email" id="email" name="user_email"  required/>
         <br/><br/>
         <label for="message">Message</label><br/>
-        <textarea className="textarea" id="message" name="message" placeholder="Write your message here.." required></textarea>
+        <textarea className="textarea" id="message" name="message"  required></textarea>
         <br/><br/>
         </div>
         

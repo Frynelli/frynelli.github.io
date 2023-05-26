@@ -1,5 +1,7 @@
 import useTypeWriter from "../../TypeWriter/TypeWriter";
 import { useState } from "react";
+import { useMediaQuery } from 'react-responsive';
+import {AiOutlineArrowLeft} from "react-icons/ai";
 
 import sxedio from '../../../assets/sxedia.png';
 import MyModal from "../../Modal";
@@ -9,6 +11,7 @@ const typeWord = 'Contact Me';
 
 
 const Contact =()=>{
+    const isMobileOrTablet = useMediaQuery({ query: '(max-width: 1200px)' })
     const [modal, setModal] = useState(false);
     const toggleModal =()=>{
         setModal(!modal);
@@ -34,7 +37,7 @@ const Contact =()=>{
 
                </div>
                <div className="button">
-           <button><a href="/">Back</a></button>
+               {isMobileOrTablet ? <button><a href="/"><AiOutlineArrowLeft/></a></button> : <button><a href="/">Back</a></button>}
            </div> 
            </div>
 

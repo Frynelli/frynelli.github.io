@@ -54,13 +54,20 @@
         h3{
           font-family: $fontSpecial;
           color: #ffff;
-          font-size: 30px;
+          font-size: $font-h3-desktop;
+          @include tablet{
+            font-size: $font-h3-tablet;
+          }
         }
 
         p{
           font-family: $fontRoboto;
-          font-size: 18px;
+          font-size: $font-p-gallery-desk;
           color: #ffff;
+          text-align: center;
+          @include tablet{
+            font-size: $font-p-gallery-tablet;
+          }
         }}
         a{
           color: black;
@@ -96,7 +103,7 @@
 //   transform: translateX(80%);
  }
  .img-wrapper:hover{
-  border: 3px solid $purple;
+  border: 3px solid $peach-dark;
  }
 
 .img-wrapper > img{

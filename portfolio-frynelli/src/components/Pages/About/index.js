@@ -1,6 +1,9 @@
-import qr from "../../../assets/qr-sample.jpg";
+import qr from "../../../assets/FrynelliOikonomou-CV/MyCV.png";
+import resume from "../../../assets/CV.pdf"
 import { NavLink } from "react-router-dom";
-import {AiOutlineGithub, AiFillLinkedin} from "react-icons/ai"
+import { useMediaQuery } from 'react-responsive';
+import {AiOutlineGithub, AiFillLinkedin, AiOutlineArrowLeft, AiOutlineArrowDown} from "react-icons/ai";
+import {BsArrowDown} from "react-icons/bs";
 import useTypeWriter from "../../TypeWriter/TypeWriter";
 
 // import useTypedSuperpower from "../../useTypedSuperpower";
@@ -8,6 +11,8 @@ const typeWord = "About Me"
 
 
 const About =()=>{
+    const isMobileOrTablet = useMediaQuery({ query: '(max-width: 1200px, min-width: 720px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 720px)' })
     const AboutMe = useTypeWriter(typeWord)
     // const [type, setType] = useState('');
     // useEffect(()=>{
@@ -27,28 +32,32 @@ const About =()=>{
            <p>
            Hello, I am a junior Front End Developer located in Greece. <br/>
             I recently discovered my passion for the world of web development and the beauty behind building useful websites.<br/>
-            I’m now looking for junior front end position to finally kick start my career and learn among professionals.
+            I’m now looking for a junior front end position to kick start my career and learn among professionals.
            </p>
+           
+           
            </div>
-           <div className="button">
+           {isMobileOrTablet ? <div className="arrow"><BsArrowDown/></div> : ""}
+           {isMobileOrTablet ? " " : isMobile ? <div className="button"><button><a href="/"><AiOutlineArrowLeft/></a></button></div> : <div className="button">
            <button><a href="/">Back</a></button>
-           </div>
+           </div>}
            
         </div>
-        <div className="box-right">
+        <div id="box-down" className="box-right">
             <div className="qr-code">
-              <img src={qr} alt="qr-code"/>
+              <NavLink exact="true" activeclassname="active" to="/about/cv"><img src={qr} alt="qr-code"/></NavLink>
             </div>
             <div className="links">
                <ul>
                 <li className="gitHub"><a href="https://github.com/Frynelli" target="blank"><AiOutlineGithub/></a></li>
                 <li className="linkedin"><a href="https://www.linkedin.com/in/frinelli-oikonomou" target="blank"><AiFillLinkedin/></a></li>
-                <li className="cv-link"><NavLink exact="true" activeclassname="active" to="/about/cv">cv</NavLink></li>
+                <li className="cv-link"><a href={resume} download="resume" target="_blank">cv</a></li>
                </ul>
                
             </div>
+        
         </div>
-
+        
     </div>
     
 }

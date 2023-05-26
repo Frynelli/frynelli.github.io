@@ -14,13 +14,18 @@
         border-bottom: 3px solid;
         h1{
             font-family: $fontSpecial;
-                font-size: 74px;
+                font-size: $font-title-desk;
                 letter-spacing: 18px;
                 height: 39%;
                 display: flex;
                 align-items: center;
                 margin-left: 5%;
-
+             @include tablet{
+                font-size: $font-title-tablet;
+             }
+             @include mobile{
+                font-size: $font-title-mob;
+             }
         }
     }
     //bottom-box
@@ -33,44 +38,26 @@ display: flex;
     justify-content: space-around;
     
     .border-div{
-        position: fixed;
-        right: 5%;
-        bottom: 5%;
+        @include xxl-desktop{
+            position: absolute;
+            right: 3%;
+            bottom: 3%;
+        }
+   
     }
     //bottom-box-button
-    .button{
-        display: flex;
-        width: 96%;
-        justify-content: end;
-        margin-bottom: 2%;
-
-        button{
-            width: 83px;
-            height: 39px;
-             background-color: #101010;
-             border: 2px solid #101010;
-            border-radius: 5px;
-            position: relative;
-            top: 10px;
-            &:hover{
-                border-color: $peach-dark;
-                background-color: white;
-            }
-           
-        }
-       
-        a{
-            color: white;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 22px;
-            font-family: monospace;
+     .button{
+         button{background-color: #101010;}
             
-            &:hover{
-                color:$peach-dark;
-            }
-        }
-    }
+         a{color: white;}
+
+            
+     }
+     .button:hover{
+        button{background-color: white;}
+        a{color: $peach-dark;}
+     }
+
 }
 
 }

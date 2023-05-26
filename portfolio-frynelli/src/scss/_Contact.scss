@@ -4,27 +4,38 @@
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
+    @include tablet{flex-direction: column;}
     .box-left{
         height: 100%;
         width: 75%;
+        @include tablet{
+            width: 100%;
+        
+        }
         .contact-text{
             // text container
             height: 100%;
             width: 100%;
-            
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+            @include tablet{width:auto ;}
             //h1 properties
             h1{
                 font-family: $fontSpecial;
-                font-size: 74px;
+                font-size: $font-title-desk;
                 letter-spacing: 18px;
                 height: 39%;
                 display: flex;
                 align-items: center;
                 margin-left: 5%;
-
+                @include tablet{
+                    font-size: $font-title-tablet;
+                    height: 30%;
+                }
+                @include mobile{
+                    font-size: $font-title-mob;
+                }
             }
             //main text-area background-color and form
             .background-color{
@@ -34,34 +45,49 @@
                 height: 98%;
                 //contact-form
                 .contact-form{
-                    height: 80%;
+                        padding-left: 33px;
+                        height: 80%;
                     display: flex;
                     flex-direction: column;
                      justify-content: center;
-
-                     .paragraph{
+                    @include tablet{ justify-content: flex-start;}
+                     
+                    .paragraph{
                         margin-left: 20px;
+                        @include mobile{
+                            margin-left: 0;
+                        }
                         h3{
                             font-family: $fontMuseo;
                             font-weight: 600;
-                            font-size: 30px;
+                            font-size: $font-h3-desktop;
                             line-height: 44.52px;
                             width: 600px;
                             margin-top: 10px;
+                            @include mobile{
+                                font-size: $font-h3-mob;
+                                width: 390px;
+                            }
                         }
                         p{
                             font-family: $fontMuseo;
                             font-weight: 400;
-                            font-size: 29px;
+                            font-size: $font-paragraph-desk;
                             line-height: 44.52px;
                             width: 600px;
                             margin-top: 10px;
                             letter-spacing: 2px;
+                            @include mobile{
+                                font-size: $font-paragraph-mobile;
+                                width: $paragraph-mobile;
+                                line-height: 33.52px;
+                            }
                             a{
                                 color: #101010;
                                 text-decoration-color: $peach-dark;
                                 &:hover{
                                     color: $peach-dark;
+                                    cursor: pointer;
                                         }
                                     }
                                 }
@@ -72,58 +98,55 @@
 
         
         .button{
-            display: flex;
-            width: 96%;
-            justify-content: end;
-    
-            button{
-                width: 83px;
-                height: 39px;
-                 background-color: #101010;
-                 border: 2px solid #101010;
-                border-radius: 5px;
-                position: relative;
-                top: 10px;
-                &:hover{
-                    border-color: $peach-dark;
-                    background-color: white;
-                }
-               
-            }
-           
-            a{
-                color: white;
-                font-weight: 600;
-                text-decoration: none;
-                font-size: 22px;
-                font-family: monospace;
-                
-                &:hover{
-                    color:$peach-dark;
-                }
-            }
+             width: 95%;
+             button{ background-color: #101010;}
+             button:hover{background-color: white !important;}
+             a{ color: white;}
+             a:hover{color: $peach-dark !important;}
         }
+        
     }
     .box-right{
           width: 50%;
           height: 100%;
-          
-          
+          @include tablet{
+            height: 300px;
+            width: 100%;
+        }
+        @include mobile{
+            height: 35%;
+        }
         .grid-box{
            
             height: 100%;
             display: grid;
             grid-template-columns: 60% 40%;
-            
+            @include tablet{
+                display: flex;
+                flex-direction: row-reverse;
+            }
             .image-sxedio{
                 z-index: 2;
-               
+               img{
+                @include tablet{
+                    width: 230px;
+                }
+                @include mobile{
+                    width: 195px;
+                }
+               }
              }
              .green-box{
                height: 100%;
                width:100%;
                background-color: $mint;
-               z-index: 1;  
+               z-index: 1; 
+               @include tablet{
+                height: 70%;
+               } 
+               @include mobile{
+                height: 38%;
+            }
              }
         }
         .email-box{
@@ -133,14 +156,24 @@
             bottom: 30%;
             padding: 20px;
             z-index: 3;
+            @include tablet{
+                bottom: 100%;
+            }
             .email{
                 font-weight: 600;
                 font-size: 34px;
+                @include tablet{
+                    font-size: 30px;
+                }
             }
             p{
                 font-family: $fontMuseo;
-                font-size: 27px;
+                font-size: $font-paragraph-desk ;
                 line-height: 59px;
+                @include tablet{
+                    font-size: 20px;
+                    line-height: 19px;
+                }
             }
             
           }
