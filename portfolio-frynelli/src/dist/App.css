@@ -31,7 +31,7 @@
     display: flex;
     width: 100%;
     justify-content: end;
-    margin-right: 15px; }
+    align-items: end; }
     .container-pages .button button {
       width: 83px;
       height: 39px;
@@ -40,13 +40,17 @@
       border-radius: 5px;
       position: relative;
       top: 10px; }
-      @media (max-width: 720px) {
+      @media (max-width: 1200px) {
         .container-pages .button button {
           width: 40px;
           height: 40px;
           border-radius: 100%;
           background-color: #FFB4B4;
           border: #f9f9f9; } }
+      @media (max-width: 720px) {
+        .container-pages .button button {
+          width: 30px;
+          height: 30px; } }
     .container-pages .button a {
       color: #101010;
       font-weight: 600;
@@ -182,32 +186,6 @@
   animation: bounceIn 1s 1s;
   animation-fill-mode: forwards; }
 
-.container-hp-g .circle-pink {
-  height: 390px;
-  width: 380px;
-  background-color: #FFB4B4;
-  border-radius: 50%; }
-
-.container-hp-g .circle-mask {
-  height: 380px;
-  width: 370px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 5px 4px; }
-
-.container-hp-g .circle-mask img {
-  width: 100%;
-  object-fit: cover; }
-
-.box-2 .rectangle-purple {
-  height: 90%;
-  width: 80px;
-  border-radius: 5px;
-  background-color: #769CFF;
-  position: absolute;
-  left: -8px;
-  opacity: 0.4; }
-
 .container {
   width: 100vw;
   height: 100vh;
@@ -219,8 +197,8 @@
 .container .container-main {
   display: flex;
   position: relative;
-  width: 96vw;
-  height: 95vh;
+  width: 94vw;
+  height: 91vh;
   max-width: 1720px;
   max-height: 1010px;
   background-color: #f8f8f8;
@@ -243,7 +221,7 @@
   border-right: 3px solid #101010; }
 
 .nav-bar nav {
-  height: 100%; }
+  height: 93%; }
 
 .nav-bar ul {
   list-style-type: none;
@@ -261,12 +239,21 @@
 
 .nav-bar ul li:hover {
   background-color: #E75656; }
+  @media (max-width: 720px) {
+    .nav-bar ul li:hover {
+      background-color: #f8f8f8; } }
   .nav-bar ul li:hover a {
     color: #f8f8f8; }
+    @media (max-width: 720px) {
+      .nav-bar ul li:hover a {
+        color: #E75656; } }
     .nav-bar ul li:hover a h2 {
       font-size: 40px;
       margin-left: 0;
       letter-spacing: 3%; }
+      @media (max-width: 720px) {
+        .nav-bar ul li:hover a h2 {
+          font-size: 35px; } }
 
 .nav-bar ul li a {
   height: 90%;
@@ -278,6 +265,10 @@
   .nav-bar ul li a:active :hover, .nav-bar ul li a.active :hover {
     text-decoration: line-through;
     color: #f8f8f8; }
+    @media (max-width: 720px) {
+      .nav-bar ul li a:active :hover, .nav-bar ul li a.active :hover {
+        color: #E75656;
+        text-decoration: none; } }
 
 .nav-bar ul li a h2 {
   margin-top: 10px;
@@ -338,10 +329,11 @@
     margin-top: 10px; }
     @media (max-width: 720px) {
       .container-about .box-left .about-content p {
-        font-size: 18px;
+        font-size: 15px;
         width: 300px;
-        line-height: 33.52px;
-        text-align: justify; } }
+        line-height: 29.52px;
+        text-align: justify;
+        width: auto; } }
 
 @media (max-height: 2100px) {
   .container-about .box-right {
@@ -405,6 +397,9 @@
         align-items: center;
         padding: 0;
         border-top: 3px solid; } }
+    @media (max-height: 2100px) and (max-width: 720px) {
+      .container-about .box-right .links {
+        height: 70%; } }
 
 @media (max-height: 2100px) {
       .container-about .box-right .links ul {
@@ -488,6 +483,9 @@
         border-right: 4px solid;
         width: 100%;
         height: 98%; }
+        @media (max-width: 1200px) {
+          .container-contact .box-left .contact-text .background-color {
+            padding-bottom: 3%; } }
         .container-contact .box-left .contact-text .background-color .contact-form {
           padding-left: 33px;
           height: 80%;
@@ -497,6 +495,10 @@
           @media (max-width: 1200px) {
             .container-contact .box-left .contact-text .background-color .contact-form {
               justify-content: flex-start; } }
+          @media (max-width: 720px) {
+            .container-contact .box-left .contact-text .background-color .contact-form {
+              padding-left: 6%;
+              justify-content: center; } }
           .container-contact .box-left .contact-text .background-color .contact-form .paragraph {
             margin-left: 20px; }
             @media (max-width: 720px) {
@@ -523,8 +525,8 @@
               letter-spacing: 2px; }
               @media (max-width: 720px) {
                 .container-contact .box-left .contact-text .background-color .contact-form .paragraph p {
-                  font-size: 18px;
-                  width: 300px;
+                  font-size: 15px;
+                  width: auto;
                   line-height: 31.52px; } }
               .container-contact .box-left .contact-text .background-color .contact-form .paragraph p a {
                 color: #101010;
@@ -608,7 +610,7 @@
             line-height: 19px; } }
         @media (max-width: 720px) {
           .container-contact .box-right .email-box p {
-            font-size: 16px; } }
+            font-size: 14px; } }
 
 .container-project {
   width: 100%;
@@ -636,12 +638,16 @@
       @media (max-width: 720px) {
         .container-project .box-top h1 {
           font-size: 30px;
-          letter-spacing: 10px; } }
+          letter-spacing: 9px; } }
   .container-project .box-bottom {
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around; }
+    justify-content: space-around;
+    margin-bottom: 2%; }
+    @media (max-width: 720px) {
+      .container-project .box-bottom {
+        margin-bottom: 3%; } }
     @media (max-height: 2100px) {
       .container-project .box-bottom .border-div {
         position: absolute;
@@ -824,7 +830,8 @@ body.active-modal {
   right: 10px; }
   .close-modal svg {
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    color: #E75656; }
   .close-modal:hover {
     color: #E75656;
     cursor: pointer; }
@@ -856,7 +863,7 @@ body.active-modal {
   border: 4px solid;
   border-radius: 4%;
   transition: all 1s; }
-  @media (max-width: 720px) {
+  @media (max-width: 1200px) {
     .img-wrapper {
       border: 2px solid; } }
   .img-wrapper img {
@@ -1001,6 +1008,11 @@ body {
 
 .cv {
   justify-content: center; }
+  @media (max-width: 720px) {
+    .cv .main-cont {
+      width: 100%;
+      height: auto;
+      display: flex; } }
 
 .cv .react-pdf__Page {
   height: 800px; }

@@ -13,7 +13,7 @@ $font-h3-tablet:15px;
 $font-h3-mob: 23px;
 $font-homePage-desk: 66px;
 $font-paragraph-desk: 28px;
-$font-paragraph-mobile: 18px;
+$font-paragraph-mobile: 15px;
 $font-btn-desk: 22px;
 $font-title-tablet: 60px;
 $font-title-mob:30px;
@@ -85,8 +85,8 @@ $nav-bar-width: 3.5rem;
     display: flex;
     width: 100%;
     justify-content: end;
-    margin-right: 15px;
     
+    align-items: end;
     button{
         width: 83px;
         height: 39px;
@@ -95,13 +95,20 @@ $nav-bar-width: 3.5rem;
         border-radius: 5px;
         position: relative;
         top: 10px;
-        //btn-mobile
-       @include mobile{
+       //tablet
+       @include tablet{
         width: 40px;
         height: 40px;
-       border-radius: 100%;
+        border-radius: 100%;
        background-color: $peach-light;
        border: #f9f9f9;
+       }
+        //btn-mobile
+       @include mobile{
+        width: 30px;
+        height: 30px;
+       
+       
        }
     }
     a{

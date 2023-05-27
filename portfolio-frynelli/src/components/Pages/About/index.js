@@ -11,7 +11,7 @@ const typeWord = "About Me"
 
 
 const About =()=>{
-    const isMobileOrTablet = useMediaQuery({ query: '(max-width: 1200px, min-width: 720px)' })
+    const isTablet = useMediaQuery({ query: '(max-width: 1200px)' })
     const isMobile = useMediaQuery({ query: '(max-width: 720px)' })
     const AboutMe = useTypeWriter(typeWord)
     // const [type, setType] = useState('');
@@ -37,16 +37,16 @@ const About =()=>{
            
            
            </div>
-           {isMobileOrTablet ? <div className="arrow"><BsArrowDown/></div> : ""}
-           {isMobileOrTablet ? " " : isMobile ? <div className="button"><button><a href="/"><AiOutlineArrowLeft/></a></button></div> : <div className="button">
+           {/* {isTablet ? <div className="arrow"><BsArrowDown/></div> : " "} */}
+           {isTablet || isMobile ? <div className="button"><button><a href="/"><AiOutlineArrowLeft/></a></button></div> : <div className="button">
            <button><a href="/">Back</a></button>
            </div>}
            
         </div>
         <div id="box-down" className="box-right">
-            <div className="qr-code">
+            {isMobile ? " " : <div className="qr-code">
               <NavLink exact="true" activeclassname="active" to="/about/cv"><img src={qr} alt="qr-code"/></NavLink>
-            </div>
+            </div>}
             <div className="links">
                <ul>
                 <li className="gitHub"><a href="https://github.com/Frynelli" target="blank"><AiOutlineGithub/></a></li>

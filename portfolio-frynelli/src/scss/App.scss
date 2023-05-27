@@ -37,6 +37,15 @@ body{
 }
 .cv{
   justify-content: center;
+
+  .main-cont{
+    @include mobile{
+      width: 100%;
+      height: auto;
+      display: flex;
+    }
+    
+}
 }
 .cv .react-pdf__Page{
   height: 800px;

@@ -55,8 +55,9 @@
             @include mobile{
                 font-size: $font-paragraph-mobile;
                 width: $paragraph-mobile;
-                line-height: 33.52px;
+                line-height: 29.52px;
                 text-align: justify;
+                width: auto;
             }
         }
     }
@@ -113,6 +114,7 @@
                     width: 150px;
                 }
             }
+            
         }
         .links{
             width: 100%;
@@ -124,7 +126,10 @@
             align-items: center;
             padding: 0;
             border-top: 3px solid;
-            
+           }
+           @include mobile{
+              height: 70%;
+              
            }
             ul{
                 display: flex;

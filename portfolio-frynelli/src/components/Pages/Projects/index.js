@@ -15,7 +15,7 @@ const Projects =()=>{
     const ProjectWord = useTypeWriter('My Projects')
     return <div  className="container-project">
         <div className="box-top">
-        <h1 className="blinking-cursor">{ProjectWord}</h1>
+            <h1 className="blinking-cursor">{ProjectWord}</h1>
         </div>
         <div className="box-bottom">
         
