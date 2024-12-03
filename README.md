@@ -1,7 +1,7 @@
 # My Portfolio
 
 I created this Portfolio using React.js and Sass for styling. 
-I tried to showcase as much from my work that I could.
+I tried to showcase most of my work.
 
 ## website
 
